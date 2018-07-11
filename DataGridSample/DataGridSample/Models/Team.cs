@@ -9,8 +9,8 @@ namespace DataGridSample.Models
 	public class Team
 	{
 		public string Name { get; set; }
-		public int Win { get; set; }
-		public int Loose { get; set; }
+		public int Wins { get; set; }
+		public int Looses { get; set; }
 		public double Percentage { get; set; }
 		public string Conf { get; set; }
 		public string Div { get; set; }

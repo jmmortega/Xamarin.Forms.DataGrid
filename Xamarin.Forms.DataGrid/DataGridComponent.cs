@@ -1,6 +1,9 @@
-﻿namespace Xamarin.Forms.DataGrid
+﻿using Xamarin.Forms.Internals;
+
+namespace Xamarin.Forms.DataGrid
 {
-	public static class DataGridComponent
+    [Preserve(AllMembers = true)]
+    public static class DataGridComponent
 	{
 		/// <summary>
 		/// You should call this method for loding the assembly

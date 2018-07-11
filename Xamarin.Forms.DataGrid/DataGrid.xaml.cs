@@ -6,10 +6,12 @@ using System.Collections;
 using System.Windows.Input;
 using System.Collections.Specialized;
 using Xamarin.Forms.DataGrid.Utils;
+using Xamarin.Forms.Internals;
 
 namespace Xamarin.Forms.DataGrid
 {
-	[Xaml.XamlCompilation(Xaml.XamlCompilationOptions.Compile)]
+    [Preserve(AllMembers = true)]
+    [Xaml.XamlCompilation(Xaml.XamlCompilationOptions.Compile)]
 	public partial class DataGrid : Grid
 	{
 		public event EventHandler Refreshing;
@@ -247,7 +249,10 @@ namespace Xamarin.Forms.DataGrid
 				if (IsSortable && SortedColumnIndex != null)
 					SortItems(SortedColumnIndex);
 				else
-					_listView.ItemsSource = _internalItems;
+                {
+                    _listView.ItemsSource = _internalItems;                    
+                }
+					
 			}
 		}
 
@@ -473,7 +478,7 @@ namespace Xamarin.Forms.DataGrid
 			return grid;
 		}
 
-		private void InitHeaderView()
+		protected void InitHeaderView()
 		{
 			SetColumnsBindingContext();
 			_headerView.Children.Clear();

@@ -1,8 +1,10 @@
 ﻿using System;
+using Xamarin.Forms.Internals;
 
 namespace Xamarin.Forms.DataGrid
 {
-	public class DataGridColumn : BindableObject, IDefinition
+    [Preserve(AllMembers = true)]
+    public class DataGridColumn : BindableObject, IDefinition
 	{
 		#region bindable properties
 		public static readonly BindableProperty WidthProperty =

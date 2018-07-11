@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Forms.Internals;
 
 namespace Xamarin.Forms.DataGrid
 {
-	public class SortDataTypeConverter : TypeConverter
+    [Preserve(AllMembers = true)]
+    public class SortDataTypeConverter : TypeConverter
 	{
 
 		public override bool CanConvertFrom(Type sourceType)

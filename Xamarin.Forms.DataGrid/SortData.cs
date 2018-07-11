@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Forms.Internals;
 
 namespace Xamarin.Forms.DataGrid
 {
-
-	[TypeConverter(typeof(SortDataTypeConverter))]
+    [Preserve(AllMembers = true)]
+    [TypeConverter(typeof(SortDataTypeConverter))]
 	public class SortData
 	{
 
